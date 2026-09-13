@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 struct s_lista{
     int valor;
     struct s_lista* sig;
