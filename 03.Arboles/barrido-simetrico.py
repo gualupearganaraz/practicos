@@ -13,10 +13,16 @@ def leer_arbol(nombre_archivo):
 
 
 def simetrico(arbol, i):
-    # TODO: tu algoritmo
-    # Imprimí cada nodo con print(arbol[...]), uno por renglón
-    pass
-
+    n = len(arbol)
+    pila=[]
+    i = 0
+    while(i<n or len(pila)>0):
+        while(i<n):
+            pila.append(i)
+            i=2*i+1 #hijo izquierdo
+        i=pila.pop()
+        print(arbol(i))
+        i=2*i+2 #hijo derecho del nodo que imprimi, ya me imprimi a mi mismo le toca a mi derecho
 
 def main():
     nombre_archivo = sys.argv[1]       
